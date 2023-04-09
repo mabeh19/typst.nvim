@@ -6,10 +6,9 @@ M.launch = function ()
   autocmd("BufWritePost", {
     pattern = "*",
     callback = function()
-      vim.cmd("!typst *.typ") -- compile saved files
+      vim.cmd("silent! typst *.typ") -- compile saved files
     end
   })
-  --vim.cmd("!typst -w *.typ &")
   vim.cmd("!okular *.pdf &")
 end
 
