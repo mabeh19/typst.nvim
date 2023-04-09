@@ -10,7 +10,7 @@ M.launch = function ()
   --  end
   --})
   vim.fn.jobstart("okular *.pdf", {detach = true})
-  vim.fn.jobstart("typst *.typ", {detach = true})
+  vim.fn.jobstart("typst -w *.typ", {detach = true})
   --vim.cmd("!okular *.pdf &")
 end
 
