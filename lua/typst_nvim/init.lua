@@ -9,7 +9,8 @@ M.launch = function ()
       vim.cmd("silent! typst *.typ") -- compile saved files
     end
   })
-  vim.cmd("!okular *.pdf &")
+  vim.fn.jobstart({"okular *.pdf"}, {detach = true})
+  --vim.cmd("!okular *.pdf &")
 end
 
 return M
